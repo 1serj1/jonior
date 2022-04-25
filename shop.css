@@ -2,27 +2,34 @@
 	min-width: 360px;
 	max-width: 1920px;
 	background-color: #D2691E;
-	margin-left: 1%;
-	margin-right: 1%;
+	margin: 1% 1% 1% 1%;
 	border: 1px solid black;
-			   /* padding: 10px 10px 10px 10px; */
+    padding: 1% 1% 1% 1% ;
 	font-family: Verdana,Geneva, Arial;
-	font-size: medium;
+	font-size: 8px;
 	text-align: center;
+	position: relative;
 	/*color: #800000;*/
 			   
        }
-.header {
+	   #logo {
+		width: 30%;
+		height: auto;
+		float: left;
+		
+	   }
+/* .header {
 	  background-repeat: no-repeat;
 	   background-size: 100%;
-	  }	   
+	  }	 */
+	  
 
 	  
-h1     {
-	    font-size: 170%;
-       }
+/* h1     {
+	    font-size: 100%;
+       } */
 h2     {
-	    font-size: 120%;
+	    font-size: 90%;
 		}
  #tel {
 	 font-family: serif;
