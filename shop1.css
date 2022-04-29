@@ -19,33 +19,41 @@
 		width: 35% ;
 		height: auto;
 		float: left;
-		}
+		}	
+.mein__dress{
+	width: 25% ;
+	height: auto;
+	float: left;
+}
+.mein__bluz{
+	/* width: 45% ; */
+	height: auto;
+	float: right;
+}
+.mein__bryk{
+	width: 80% ;
+	/* height: auto; */
+	float: right;
+	/* float: left; */
+}		   
 
 	
- .mein {  
-	    border: 10px solid black;
-		clear: both;
-	
-	
-	}
-
-	.footer  {
-		border: 10px solid black;
-	
+.footer  {
+	     clear: both;
 		 font-family: serif;
 		 color: black; 
 		 font-weight: bolder;
 		 /* text-decoration: underline; */
 	}
 #novinki {
-	position: absolute;
+
 	top: 600px;
 	/* float: right; */
 	/* border: 1px solid #800000; */
 	
 }
 #novinki img{
-	margin: 10px 10px 10px 10px;
+	/* margin: 10px 10px 10px 10px; */
 }
 
 a:hover {
