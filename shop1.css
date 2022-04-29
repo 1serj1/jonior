@@ -3,26 +3,40 @@
 	max-width: 1920px;
 	background-color: #D2691E;
 	margin: 1% 1% 1% 1%;
-    padding: 0 1% 1% 1% ;
+    padding: 1% 1% 1% 1% ;
 	font-family: Verdana,Geneva, Arial;
+	font-size: 11px;
+	text-align: center;
 	 }
-.header {
-	 
-	  }	
-	  #logo {
-		width: 35%;
+ #header__text{
+		float: right;
+		width: 60%;
+		text-align: center;
+		height: 68px;
+		padding-top: 0 ;
+        }
+#logo {
+		width: 35% ;
 		height: auto;
 		float: left;
-		margin-top: 0 ;
-	   }
+		}
 
 	
  .mein {  
-	    /* border: 10px solid black; */
+	    border: 10px solid black;
+		clear: both;
 	
 	
 	}
 
+	.footer  {
+		border: 10px solid black;
+	
+		 font-family: serif;
+		 color: black; 
+		 font-weight: bolder;
+		 /* text-decoration: underline; */
+	}
 #novinki {
 	position: absolute;
 	top: 600px;
