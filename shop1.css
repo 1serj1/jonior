@@ -13,7 +13,7 @@
 		width: 60%;
 		text-align: center;
 		height: 68px;
-		padding-top: 0 ;
+		padding: 0 2% 1% 0 ;
         }
 #logo {
 		width: 35% ;
@@ -27,22 +27,15 @@
 	height: 50px;
 	vertical-align: top;
 	}
-
-
 #novinki {
-
-	top: 600px;
-	/* float: right; */
-	/* border: 1px solid #800000; */
-	
+	margin-top: 5%;
 }
-#novinki img{
-	/* margin: 10px 10px 10px 10px; */
+#news {
+	margin-top: 25%;
 }
-
-a:hover {
+/* a:hover {
 	color: white;
-	 }
+	 } */
 	
  /* @media only screen and (min-width: 320px)and (max-width: 360px){}
  @media only screen and (max-width: 1920px) and (min-width: 1475px) {}
