@@ -20,35 +20,15 @@
 		height: auto;
 		float: left;
 		}	
-.mein__dress{
-	width: 25% ;
-	height: auto;
-	float: left;
-}
-.mein__bluz{
-	margin-left: 30%;
-    width: 40%;	
-	height: auto;
-	
-}
-.mein__bryk{
-	margin-left: 80%;
-    width: 20%;	
-	/* height: auto; */
-	/* width: 80% ; */
-	/* height: auto; */
-	float: right;
-	/* float: left; */
-}		   
-
-	
-.footer  {
-	     clear: both;
-		 font-family: serif;
-		 color: black; 
-		 font-weight: bolder;
-		 /* text-decoration: underline; */
+.mein__dress, .mein__bluz,.mein__bryk
+   {
+	display: inline-block;
+	width:30%;
+	height: 50px;
+	vertical-align: top;
 	}
+
+
 #novinki {
 
 	top: 600px;
