@@ -76,6 +76,7 @@ h2     {
 
 #news {
 	position: absolute;
+    float: right; 
 	/* top: 800px; */
 
 	/* border: 1px solid #800000; */
@@ -101,7 +102,7 @@ h2     {
 	 height: 400px; */
 }
 #novinki img{
-	/* margin: 10px 10px 10px 10px; */
+	margin: 10px 10px 10px 10px;
 }
 
 a:hover {
