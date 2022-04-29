@@ -26,12 +26,16 @@
 	float: left;
 }
 .mein__bluz{
-	/* width: 45% ; */
+	margin-left: 30%;
+    width: 40%;	
 	height: auto;
-	float: right;
+	
 }
 .mein__bryk{
-	width: 80% ;
+	margin-left: 80%;
+    width: 20%;	
+	/* height: auto; */
+	/* width: 80% ; */
 	/* height: auto; */
 	float: right;
 	/* float: left; */
