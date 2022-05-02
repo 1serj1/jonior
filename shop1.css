@@ -93,86 +93,71 @@ p{
 		text-align: center;
 		height: auto;
 		padding: 0 2% 1% 0 ;
-		font-size: 50px;
+		font-size: 3em;
 }	
 p{
 	font-size: 30px;
 	font-weight: bold;
 }
 #novinki {
-	margin: 5% 1% 5% 1%;	
+	margin: 10% 1% 5% 1%;	
 	float: left;
 	width: 45%;
 }
 #novinki img {
 	display: inline-block;
 	width:auto;
-	height: 100px;
+	height: 200px;
 	vertical-align: top;
+	margin: 1% 1% 1% 1%;
 }	
 
 #tel {
 font-family: serif;
 color: black; 
 font-weight: bolder;
-text-decoration: underline;
+margin: 5% auto auto auto;
+font-size: 2em;
 }
 #kypon {
 position: fixed; 
-/* bottom: %; */
 right: -2%;
 }	
-/* .vibor {
-width: 100%;
-margin: auto;
-height: 20%;
-clear: left;
-}
-.dress{
- float: left; /*Задаем обтекание*/
- /* font-size: 50px;
- width: 15%; /*Фиксируем ширину блока*/
- /* margin-right: 10px; */ 
- 
 
-/* h4{
-font-size: 20px; */
-
-/* #news {
-border: 1px solid #800000;
-text-align: center;
-font-weight: bolder;
-width: 45%;
-margin: 0 0 0 90px;
-height: 400px; */
-/*left: 300px; */
-/*  float: right; */
-/* top: 20%;
-right: 70%; */
-/* }
-#novinki {
-float: right;
-border: 1px solid #800000;
-text-align: center;
-font-weight: bolder;
-width: 45%;
-margin: 0 90px 0 10px;
-height: 400px;
-}
-#novinki img{
-margin: 10px 10px 10px 10px;
-} */
 .mein__oll{
 	float: right;
-	border: 1px solid #800000;
-	/* text-align: center; */
 	font-weight: bolder;
-	width: 45%;
-	margin: 0 90px 0 10px;
+	width: 40%;
+	margin: 40px 90px 0 10px;
 	height: 400px;
-	}
+	font-size: 15px;
+	position: relative;
+	}		
 	.mein__oll img{
-	margin: 10px 10px 10px 10px;
+		height: 200px;
+		width: auto;
 	}
+.mein__oll h1{
+	text-align: right;
+}
+.mein__dress{
+	position: absolute;
+	margin: 1% 1%  1%  10% ;
 
+}
+.mein__bluz{
+	position: absolute;
+	margin: 1% 1%  1%  80% ;
+
+}
+.mein__bryk{
+	position: absolute;
+	margin: 1% 1%  1%  40% ;
+
+}
+#news{
+	margin-top: 40%;
+	font-size: 2em;
+	border: 1px solid #800000;
+}
 }
