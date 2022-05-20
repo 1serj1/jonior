@@ -1,9 +1,9 @@
 "use strict";
 
-const skidka = prompt(" Если Вы желаете получить скидку, ввидите Ваш  e mail","");
+var skidka = prompt("Введите Ваш  e mail","");
 
-const klientDB = {
+ const klientDB = {
 
     klient:skidka
-};
+}; 
 console.log (klientDB);
