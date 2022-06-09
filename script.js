@@ -1,9 +1,13 @@
 "use strict";
 
-var skidka = prompt("Введите Ваш  e mail","");
+document.addEventListener(`DOMContentLoaded`, () => { 
+
 
  const klientDB = {
 
-    klient:skidka
+    klientName: prompt("Как к Вам обращатся?",""),
+    klientEmail: prompt("Введите Ваш  e mail","")
+
 }; 
 console.log (klientDB);
+});
