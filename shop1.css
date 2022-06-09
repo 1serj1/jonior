@@ -21,6 +21,15 @@
 		height: auto;
 		float: left;
 		}	
+		.add{
+
+			position: absolute;
+			z-index:  100;
+			margin: (10%, 30%, 50%, 3%);
+			opacity: 1;
+	  
+			 /* background: #D2691E(10%, 0, 0, 3%); */
+		}
 .mein__dress, .mein__bluz,.mein__bryk
    {
 	display: inline-block;
