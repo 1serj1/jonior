@@ -11,10 +11,16 @@ document.addEventListener(`DOMContentLoaded`, () => {
 //     const userEmail = prompt("Введите Ваш  e mail","")
 // }
 //  };
- const klientDB = {
+//  const klientDB = {
 
-    klientName: prompt("Как к Вам обращатся?",""),
-    klientEmail: prompt("Введите Ваш  e mail","")
-}; 
-console.log (klientDB);
+//     klientName: prompt("Как к Вам обращатся?",""),
+//     klientEmail: prompt("Введите Ваш  e mail","")
+// }; 
+// console.log (klientDB);
+const addForm = document.querySelector("form.add");
+const userName =addForm.querySelector("name__input");
+const userEmail = addForm.querySelector("eMail__input");
+
+
+
 });
