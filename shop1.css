@@ -8,7 +8,7 @@
 	font-size: 11px;
 	text-align: center;
 	 }
-	 .name__input, .adding__input, .button {
+	 .name__input, .email__input, .button {
 		border-radius:10px;
 		width: 80% ;
 		/* padding: 5%, 5%, 5%, 5%; */

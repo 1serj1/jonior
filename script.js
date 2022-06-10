@@ -32,15 +32,17 @@ addForm.remove();  // что то сделать
 }); 
 
 // // выбираем форму с HTML
- const  name = addForm.querySelector(".name__input"), // из формы брем  окошко ввода
-        eMail = addForm.querySelector(".email__input"),
+    
+ 
          btn =  addForm.getElementsByTagName(`button`)[1];
 
-        btn.addEventListener(`click`, () => { // назначаем слушатель события
+         btn.addEventListener(`click`, (ev) => { // назначаем слушатель события
             // //     //`click` - название события
-        //    // ev.preventDefault();  
-        //    let  userName = name.value; 
-        //    //let  userEmail = eMail.value;         
+           ev.preventDefault(); 
+           let  name =  addForm.querySelector(`[name = "name"]`), // из формы брем  окошко ввода
+                email =  addForm.querySelector(`[name = "email"]`);
+                //   userName = name.value, 
+                //   userEmail = eMail.value;         
         //    console.log(userName);   
         // //    const klientDB = {
 
@@ -49,11 +51,12 @@ addForm.remove();  // что то сделать
            
 
             }); 
-            // const klientDB = {
-
-            //     userName: userEmail
-            //     };     
-            // console.log(klientDB);  
+            const klientDB = {
+                name: name.value,
+                email: email.value  
+            }; 
+            // 
+            console.log(klientDB);  
 //const  checkbox = addForm.querySelector(`[type="checkbox"]`);  // поставлена галочка в форме
 //            addForm.addEventListener(`click`, (ev) => { // ev - событие
 //              //submit - отправка формы
