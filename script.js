@@ -2,7 +2,7 @@
 
 document.addEventListener(`DOMContentLoaded`, () => { 
 
-    const klientDB = {}; 
+    const klientDB = []; 
 
     const addForm = document.querySelector("form.add"); 
     const btnnow = addForm.getElementsByTagName(`button`)[0];
@@ -16,16 +16,21 @@ document.addEventListener(`DOMContentLoaded`, () => {
     btn.addEventListener(`click`, (e) => { // назначаем слушатель события
         e.preventDefault(); 
         const nameUser = addForm.querySelector(`.name__input`).value,
-              email = addForm.querySelector(`.email__input`).value;
-
-              klientDB.push(nameUser);  
-             
-            
-
+              email = addForm.querySelector(`.email__input`).value,
+              klient = `${nameUser + " post: "}${email}`;
+              klientDB.push(klient); 
+     if (klient.search (`@`) == -1){
+alert ( " Вы ошиблись! Повторите ввод.")
+      return;
+     } else{
+      addForm.remove();  
+     }       
+    
+    //  console.log (  klient.search (`@`));
       
-     addForm.remove();                   
+                      
    });  
-   
+  
    console.log (  klientDB);
         
 //  function pusto(){
