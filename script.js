@@ -2,6 +2,7 @@
 
 document.addEventListener(`DOMContentLoaded`, () => { 
 
+    const klientDB = {}; 
 
     const addForm = document.querySelector("form.add"); 
     const btnnow = addForm.getElementsByTagName(`button`)[0];
@@ -14,16 +15,19 @@ document.addEventListener(`DOMContentLoaded`, () => {
     
     btn.addEventListener(`click`, (e) => { // назначаем слушатель события
         e.preventDefault(); 
-        const name = addForm.querySelector(`.name__input`).value,
+        const nameUser = addForm.querySelector(`.name__input`).value,
               email = addForm.querySelector(`.email__input`).value;
 
+              klientDB.push(nameUser);  
+             
+            
 
-
-        console.log (email,name);
+      
      addForm.remove();                   
    });  
-
-//
+   
+   console.log (  klientDB);
+        
 //  function pusto(){
 //   if (userName) {  // если userName пустой, то фолс - цикл не пойдет - додумать, хоршая идея!
 //       alert(userName);
