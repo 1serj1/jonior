@@ -8,21 +8,31 @@
 	font-size: 11px;
 	text-align: center;
 	 }
-	 .name__input, .email__input, .button {
+	 .name__input, .email__input {
 		border-radius:10px;
 		width: 80% ;
-		/* padding: 5%, 5%, 5%, 5%; */
+	    padding: 1%  1%  5% 1% ;
+		margin: 3% 1% 1% 1%;
 	}
+	#btnnow,#btn {
+		border-radius:10px;
+		
+		margin: 3% 1% 1% 1%;
+		background-color: #D2691E;
+	}
+
 	.add{
 
 		position: absolute;
 		z-index:  100;
 		background-color: darkred;
 		border-radius:10px;
-	/* border: 5px, solid, black; */
-		
-		opacity: 1;
-			   /* background: #D2691E(10%, 0, 0, 3%); */
+		padding: 1%  1%  5% 1% ;
+	
+	}
+	.promo__interactive-title {
+		font-weight: bold;
+		font-size: 130%;
 	}
  @media only screen and (min-width: 320px)and (max-width: 450px){	 
  #header__text{

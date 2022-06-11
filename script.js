@@ -18,11 +18,12 @@ document.addEventListener(`DOMContentLoaded`, () => {
         const nameUser = addForm.querySelector(`.name__input`).value,
               email = addForm.querySelector(`.email__input`).value,
               klient = `${nameUser + " post: "}${email}`;
-              klientDB.push(klient); 
-     if (klient.search (`@`) == -1){
-alert ( " Вы ошиблись! Повторите ввод.")
+             
+     if (klient.search (`@`) == -1 && klient != ` `){
+alert ( " Вы ошиблись. Пороверьте данные.")
       return;
      } else{
+      klientDB.push(klient); 
       addForm.remove();  
      }       
     
@@ -31,7 +32,7 @@ alert ( " Вы ошиблись! Повторите ввод.")
                       
    });  
   
-   console.log (  klientDB);
+  //  console.log (  klientDB);
         
 //  function pusto(){
 //   if (userName) {  // если userName пустой, то фолс - цикл не пойдет - додумать, хоршая идея!
