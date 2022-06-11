@@ -2,6 +2,27 @@
 
 document.addEventListener(`DOMContentLoaded`, () => { 
 
+
+    const addForm = document.querySelector("form.add"); 
+    const btnnow = addForm.getElementsByTagName(`button`)[0];
+    
+     btnnow.addEventListener(`click`, () => { // назначаем слушатель события
+      addForm.remove();  // что то сделать                  
+    }); 
+    
+    const btn = addForm.getElementsByTagName(`button`)[1];
+    
+    btn.addEventListener(`click`, (e) => { // назначаем слушатель события
+        e.preventDefault(); 
+        const name = addForm.querySelector(`.name__input`).value,
+              email = addForm.querySelector(`.email__input`).value;
+
+
+
+        console.log (email,name);
+     addForm.remove();                   
+   });  
+
 //
 //  function pusto(){
 //   if (userName) {  // если userName пустой, то фолс - цикл не пойдет - додумать, хоршая идея!
@@ -19,44 +40,29 @@ document.addEventListener(`DOMContentLoaded`, () => {
 // const addForm = document.querySelector("form.add");
 // const userName =addForm.querySelector("name__input");
 // const userEmail = addForm.querySelector("eMail__input");
-const addForm = document.querySelector("form.add"); 
-const btnnow = addForm.getElementsByTagName(`button`)[0];
-// console.log (btnnow);
 
-// btnnow.onclick = function() { // используем свойство DOM   .onclick
-//         alert(`Click`);  // что то сделать
-//     };
- btnnow.addEventListener(`click`, () => { // назначаем слушатель события
-// //     //`click` - название события
-addForm.remove();  // что то сделать                  
-}); 
 
 // // выбираем форму с HTML
-    
- 
-         btn =  addForm.getElementsByTagName(`button`)[1];
+       
+        //    ev.preventDefault(); 
+        //    let  name =  addForm.querySelector(`[name = "name"]`), // из формы брем  окошко ввода
+        //         email =  addForm.querySelector(`[name = "email"]`);
+        //         //   userName = name.value, 
+        //         //   userEmail = eMail.value;         
+        // //    console.log(userName);   
+        // // //    const klientDB = {
 
-         btn.addEventListener(`click`, (ev) => { // назначаем слушатель события
-            // //     //`click` - название события
-           ev.preventDefault(); 
-           let  name =  addForm.querySelector(`[name = "name"]`), // из формы брем  окошко ввода
-                email =  addForm.querySelector(`[name = "email"]`);
-                //   userName = name.value, 
-                //   userEmail = eMail.value;         
-        //    console.log(userName);   
-        // //    const klientDB = {
-
-        //         userName: userEmail
-        //      };     
+        // //         userName: userEmail
+        // //      };     
            
 
-            }); 
-            const klientDB = {
-                name: name.value,
-                email: email.value  
-            }; 
-            // 
-            console.log(klientDB);  
+        //     }); 
+        //     const klientDB = {
+        //         name: name.value,
+        //         email: email.value  
+        //     }; 
+        //     // 
+        //     console.log(klientDB);  
 //const  checkbox = addForm.querySelector(`[type="checkbox"]`);  // поставлена галочка в форме
 //            addForm.addEventListener(`click`, (ev) => { // ev - событие
 //              //submit - отправка формы
