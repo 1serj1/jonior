@@ -1,108 +1,46 @@
-"use strict";
+"use strict"; // строгий станларт
 
-document.addEventListener(`DOMContentLoaded`, () => { 
+ const addForm = document.addEventListener(`DOMContentLoaded`, () => {   // сначала, строим DOM -  потом исполнение
+  
+    const klientDB = [];  // массив под клиентов
 
-    const klientDB = []; 
-
-    const addForm = document.querySelector("form.add"); 
-    const btnnow = addForm.getElementsByTagName(`button`)[0];
+    const addForm = document.querySelector("form.add");  // из какой формы HTML
+    const btnnow = addForm.getElementsByTagName(`button`)[0]; //  назначил первую кнопку
     
      btnnow.addEventListener(`click`, () => { // назначаем слушатель события
-      addForm.remove();  // что то сделать                  
+      addForm.remove();  // очистить фому                
     }); 
     
-    const btn = addForm.getElementsByTagName(`button`)[1];
+    const btn = addForm.getElementsByTagName(`button`)[1];//  назначил вторую кнопку
     
     btn.addEventListener(`click`, (e) => { // назначаем слушатель события
-        e.preventDefault(); 
-        const nameUser = addForm.querySelector(`.name__input`).value,
-              email = addForm.querySelector(`.email__input`).value,
-              klient = `${nameUser + " post: "}${email}`;
-             
-     if (klient.search (`@`) == -1 && klient != ` `){
-alert ( " Вы ошиблись. Пороверьте данные.")
-      return;
-     } else{
-      klientDB.push(klient); 
-      addForm.remove();  
-     }       
-    
-    //  console.log (  klient.search (`@`));
-      
+        e.preventDefault();  // отменяем стандарт поведение браузера, чтоб не косячил
+        const nameUser = addForm.querySelector(`.name__input`).value, // забираю значение из формы
+              email = addForm.querySelector(`.email__input`).value,// забираю следующее значение из формы
+              klient = `${nameUser + " post: "}${email}`; // объединяю  в общей переменной данные каждого пользователя
+              // если что - потом сплайсом порезать по символу post:   на 2 части             
+     if (klient.search (`@`) == -1 && klient != ` `){   // условие, если  нет @ (возвращ -1) И пустой строки (не заполнено).
+
+            if( document.querySelector(`.user__alert`).style.display == "none"){// условие, если блок отключен
+                document.querySelector(`.user__alert`).style.display = "";       // включить, лучше чем blok  -  меньше косяков
+               }       
+                     setTimeout(() => {    // задержка сообщения для юзера
+                       document.querySelector(`.user__alert`).style.display = "none"; // после задержки - отключить
+                     }, 2000);  //  через 1 секунду
+               return; // зациклил, пока не наберут правильно, или не откажутся
+        } else{
+
+      klientDB.push(klient); // передача в массив данных
+      addForm.remove();  // убираем форму из просмотра после внесенния данных
+
+     }         
                       
    });  
   
-  //  console.log (  klientDB);
-        
-//  function pusto(){
-//   if (userName) {  // если userName пустой, то фолс - цикл не пойдет - додумать, хоршая идея!
-//       alert(userName);
-// } else {
-//     const userEmail = prompt("Введите Ваш  e mail","")
-// }
-//  };
-//  const klientDB = {
-
-//     klientName: prompt("Как к Вам обращатся?",""),
-//     klientEmail: prompt("Введите Ваш  e mail","")
-// }; 
-// console.log (klientDB);
-// const addForm = document.querySelector("form.add");
-// const userName =addForm.querySelector("name__input");
-// const userEmail = addForm.querySelector("eMail__input");
+  
 
 
-// // выбираем форму с HTML
-       
-        //    ev.preventDefault(); 
-        //    let  name =  addForm.querySelector(`[name = "name"]`), // из формы брем  окошко ввода
-        //         email =  addForm.querySelector(`[name = "email"]`);
-        //         //   userName = name.value, 
-        //         //   userEmail = eMail.value;         
-        // //    console.log(userName);   
-        // // //    const klientDB = {
 
-        // //         userName: userEmail
-        // //      };     
-           
-
-        //     }); 
-        //     const klientDB = {
-        //         name: name.value,
-        //         email: email.value  
-        //     }; 
-        //     // 
-        //     console.log(klientDB);  
-//const  checkbox = addForm.querySelector(`[type="checkbox"]`);  // поставлена галочка в форме
-//            addForm.addEventListener(`click`, (ev) => { // ev - событие
-//              //submit - отправка формы
-//              ev.preventDefault(); // отменили стандартное поведение браузера
-//              let ulLast = name.value; // новое значение от юзера
-//              //const favorit = checkbox.checked; // HTML свойство - тру - есть галочка, фолс - нет
-             
-//               if (ulLast) { // если ulLast - пустая строка, то цикл - фолс и ни чего не работает
-//                 if (ulLast.length > 21) {  // если строка больше 21 
-//                     ulLast = `${ulLast.substring(0, 22)}...`;  // обрезать ее и добавить ...
-//                 }
-
-//                 if(favorit){   // вывод с чекбокса  const favorit = checkbox.checked; 
-//                    console.log("Добавляем любимый фильм");
-//                 }
-
-//                 movieDB.movies.push(ulLast); // вносим в массив
-//                 //movieDB.movies.sort(); - было, выше объявлена фуия - используем:
-//                 sortArr (movieDB.movies);  // вызов функц выражения выше
-   
-//                 createMovieList(movieDB.movies, movieList); // вызов функц выражения выше
-   
-//                 //addForm.reset(); // метод очистки (сброса) формы
-
-//               }
-            
-
-//              ev.target.reset(); // метод очистки (сброса) формы  именно этого события
-
-//            });
 
 
 });

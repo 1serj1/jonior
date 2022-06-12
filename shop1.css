@@ -21,7 +21,7 @@
 		background-color: #D2691E;
 	}
 
-	.add{
+	.add,.user__alert {
 
 		position: absolute;
 		z-index:  100;
@@ -30,6 +30,10 @@
 		padding: 1%  1%  5% 1% ;
 	
 	}
+	/* #user__alert {
+	    display: none;     
+	} */
+
 	.promo__interactive-title {
 		font-weight: bold;
 		font-size: 130%;
