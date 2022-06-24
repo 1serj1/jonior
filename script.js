@@ -38,7 +38,88 @@
                       
    });  
   
-  
+  // ВАЖНО!!! Создание таймера. План:
+// 1. Фия таймера
+// 2. Фия считающая дедлайн
+// 3. Фия обновления таймера
+
+
+// 1. Фия таймера
+const deadLine = `2022-08-23`; // создаем дату - точка отсчета
+// формат страки в таком виде, ибо так выдает бэкенд, может приходить динамически с панели администратора 
+
+//фуя считающая разницу мезду дедлайном и текущим  временем 
+// 2. Фия считающая дедлайн
+function getTimerRemainihg(endtime) {
+       const t = Date.parse(endtime) - Date.parse(new Date()),
+       // преобразуем в миллисекунды и получаем разницу
+             days = Math.floor (t/(1000*60*60*24)), 
+       // Math.floor - округлили, t  - всего милисекунд, 1000*60*60*24 - сколько милисекунд в сутках
+             hours =  Math.floor ((t/(1000*60*60)%24)),
+       // также , но в часах, %24 - возвращает остаток от суток, что бы не было 67 часов в счетчике 
+             minutes =  Math.floor ((t/1000/60)%60),
+             seconds =  Math.floor ((t/1000)%60);
+
+             // т.к. переменные внутри фуии, для их использования возвращаем объект
+       return {
+              "total": t,
+              "days":  days,
+              "hours": hours,
+              "minutes": minutes,
+              "seconds": seconds 
+       };
+}
+
+// если число из одной цифры - приписываем  0 вначале
+function getZero (num) {
+         if (num >= 0 && num < 10) { 
+// num >= 0 проверка на отриц. число - на всякий случай
+              return `0${num}`;
+// если цифра одна - дописываем 0 
+         } else {
+              return num;
+// если нет - пишем ее
+         }
+
+}
+
+
+
+// 3. Фия обновления таймера
+function setClock(selector, endtime) {
+       const timer = document.querySelector(selector), // с каким HTML
+              days = document.querySelector(`#days`), 
+              hours = document.querySelector(`#hours`), 
+              minutes = document.querySelector(`#minutes`), 
+              seconds = document.querySelector(`#seconds`),
+              timyInterval = setInterval(updateClouck,1000); // перезапуск фии updateClouck каждую секунду
+
+              updateClouck(); // запуск с открытия - что бы не моргало
+
+       function updateClouck(){
+                 const t = getTimerRemainihg(endtime); // задействуем фую выше, используя ее итоговый объект
+        
+                 // первоначальный вариант, без дописывания нуля 
+              //    days.innerHTML = t.days;
+              //    hours.innerHTML = t.hours;
+              //    minutes.innerHTML = t. minutes;
+              //    seconds.innerHTML = t.seconds;
+
+
+              // с дописанным нулем 
+                 days.innerHTML = getZero(t.days);
+                 hours.innerHTML = getZero(t.hours);
+                 minutes.innerHTML = getZero(t. minutes);
+                 seconds.innerHTML = getZero(t.seconds);
+
+
+                 if (t.total <= 0) {  // если время кончилось - отключить перезапуск
+                      clearInterval( timyInterval);
+                 }
+       }    
+}
+
+setClock (`.timer`, deadLine);
 
 
 
