@@ -8,12 +8,33 @@
 	font-size: 11px;
 	text-align: center;
 	 }
-.promotion__descr{margin-top:40px;font-size:20px;line-height:24px;font-weight:300}
-.promotion__descr span{font-weight:700;font-size:26px}
-.promotion__timer{width:50%}
-.promotion__timer .title{text-align:right}
-.promotion__timer .timer{margin-top:60px;padding-left:95px;display:flex;justify-content:space-between;align-items:center}
-.promotion__timer .timer__block{
+.promotion__descr{ /*промотекст*/
+	margin-top:40px;
+	font-size:11px;
+	line-height:24px;
+	font-weight:300;
+	font-weight: bold;
+}
+.promotion__descr span{
+	font-weight:700;
+	font-size:11px;
+}
+.promotion__timer{  /*блок таймеров*/
+	width:auto
+}
+.promotion__timer .title{
+	text-align:center
+}
+.promotion__timer .timer{
+	/* margin:5%; */
+	/* margin: 3% 1% 5% 1%; */
+	padding-left:1%;
+	padding-right:1%;
+	display:flex;
+	justify-content:space-between;
+	align-items:center
+}
+.promotion__timer .timer__block{ /*окошки*/
 	width:102px;
 	height:120px;
 	background:#fff;
@@ -21,7 +42,13 @@
 	font-size:16px;
 	font-weight:300;
 	text-align:center}
-.promotion__timer .timer__block span{display:block;margin-top:20px;margin-bottom:5px;font-size:56px;font-weight:700}
+.promotion__timer .timer__block span{ /*окошки содержимое*/
+	display:block;
+	margin-top:20px;
+	margin-bottom:5px;
+	font-size:56px;
+	font-weight:700
+}
 	 
 .name__input, .email__input {
 		border-radius:10px;
@@ -80,6 +107,7 @@
 }
 #tel{
 	margin-top: 10%;
+	margin-bottom: 10%;
 		}
 #kypon{
 	margin-top: 10%;
@@ -121,7 +149,7 @@
 	font-family: serif;
 	color: black; 
 	font-weight: bolder;
-	margin: 5% auto auto auto;
+	margin: 5% auto 5% auto;
 	font-size: 140%;
 	}
 	#kypon {
@@ -165,7 +193,7 @@
 	
 	}
 	#news{
-		margin: 30%  5% 5% auto;
+		margin: 15%  5% 5% auto;
 		font-size: 1em;
 		
 		}
@@ -207,7 +235,7 @@
 	font-family: serif;
 	color: black; 
 	font-weight: bolder;
-	margin: 5% auto auto auto;
+	margin: 5% auto 5% auto;
 	font-size: 160%;
 	}
 	
@@ -246,7 +274,7 @@
 	
 	}
 	#news{
-		margin: 30%  5% 3% auto;
+		margin: 10%  5% 3% auto;
 		font-size: 120%;
 		
 		}
@@ -289,8 +317,9 @@ p{
 font-family: serif;
 color: black; 
 font-weight: bolder;
-margin: 5% auto auto auto;
+margin: 5% auto 5% auto;
 font-size: 2em;
+
 }
 #kypon {
 position: fixed; 
@@ -329,7 +358,7 @@ right: -2%;
 
 }
 #news{
-	margin-top: 40%;
+	margin-top: 10%;
 	font-size: 2em;
 	}
 }
