@@ -45,8 +45,22 @@
 
 
 // 1. Фия таймера
-const deadLine = `2022-07-23`; // создаем дату - точка отсчета
+let deadLine = `2022-06-27`; // создаем дату - точка отсчета
 // формат страки в таком виде, ибо так выдает бэкенд, может приходить динамически с панели администратора 
+
+//переназначение точки отсчета  
+let  now = Date.parse(deadLine);  // перевод даты в миллисекунды
+
+function getNeyDate (){
+      if (now <= Date.parse(new Date())){
+            let redeadLine = Date.parse(new Date()) + 1000*60*60*72;
+                 deadLine = redeadLine;
+        
+      }
+}
+getNeyDate();
+
+let chekData = new Date(deadLine); // перевод миллисекунд в дату
 
 //фуя считающая разницу мезду дедлайном и текущим  временем 
 // 2. Фия считающая дедлайн
@@ -119,7 +133,7 @@ function setClock(selector, endtime) {
        }    
 }
 
-setClock (`.timer`, deadLine);
+setClock (`.timer`, chekData );
 
 
 
