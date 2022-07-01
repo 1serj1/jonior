@@ -8,6 +8,9 @@
 	font-size: 11px;
 	text-align: center;
 	 }
+/* .main{
+	margin-top: 3%;
+} */
 .promotion__descr{ /*промотекст*/
 	margin-top:40px;
 	font-size:11px;
@@ -41,7 +44,8 @@
 	box-shadow:0 4px 20px rgba(0,0,0,.25);
 	font-size:16px;
 	font-weight:300;
-	text-align:center}
+	text-align:center
+}
 .promotion__timer .timer__block span{ /*окошки содержимое*/
 	display:block;
 	margin-top:20px;
@@ -77,6 +81,16 @@
 		font-weight: bold;
 		font-size: 130%;
 	}
+	button.btn.btn_white {
+		font-weight: bold;
+		background-color: darkred;
+		border-radius:10px;
+		margin-right: 3%;
+		margin-bottom: 15%;
+		float: right;
+	}
+	
+	
  @media only screen and (min-width: 320px)and (max-width: 450px){	 
  #header__text{
 		float: right;
@@ -99,9 +113,14 @@
 	height: 50px;
 	vertical-align: top;
 	}
-#novinki {
-	margin-top: 5%;
-}
+/* #novinki {
+	margin-top: 10%;
+	/* text-align:center */
+
+/* #h1{
+	padding-left: 40%;
+} */
+
 #news {
 	margin-top: 25%;
 }
@@ -134,8 +153,9 @@
 	}
 	#novinki {
 		margin: 3% 1% 5% 1%;	
-		float: left;
+		float: center;
 		width: 45%;
+
 	}
 	#novinki img {
 		display: inline-block;
@@ -159,7 +179,7 @@
 	}	
 	
 	.mein__oll{
-		float: right;
+		float: center;
 		font-weight: bolder;
 		width: 40%;
 		 margin: 5% 10% 0 1%;    	
@@ -173,7 +193,7 @@
 			width: auto;
 		}
 	.mein__oll h1{
-		text-align: right;
+		/* text-align: center; */
 		font-size: 1em;
 	
 	}
