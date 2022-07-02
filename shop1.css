@@ -89,7 +89,22 @@
 		margin-bottom: 15%;
 		float: right;
 	}
-	
+	#novinki {
+		display: flex;
+		justify-content: space-around;
+		margin: 3% 1% 5% 1%;	
+		/* float: center;
+		width: 45%; */
+
+	}
+	#novinki img {
+		/* display: inline-block; */
+		width:auto;
+		height: 6em;
+		/* vertical-align: top; */
+		margin: 1% 1% 1% 1%;
+	}	
+
 	
  @media only screen and (min-width: 320px)and (max-width: 450px){	 
  #header__text{
@@ -113,6 +128,7 @@
 	height: 50px;
 	vertical-align: top;
 	}
+	
 /* #novinki {
 	margin-top: 10%;
 	/* text-align:center */
@@ -151,19 +167,7 @@
 		font-size: 1em;
 		font-weight: bold;
 	}
-	#novinki {
-		margin: 3% 1% 5% 1%;	
-		float: center;
-		width: 45%;
-
-	}
-	#novinki img {
-		display: inline-block;
-		width:auto;
-		height: 6em;
-		vertical-align: top;
-		margin: 1% 1% 1% 1%;
-	}	
+	
 	
 	#tel {
 	font-family: serif;
