@@ -1,3 +1,4 @@
+ 
  body {
 	min-width: 320px;
 	max-width: 1920px;
@@ -8,9 +9,7 @@
 	font-size: 2vw;
 	text-align: center;
 	 }
-/* .main{
-	margin-top: 3%;
-} */
+
 .promotion__descr{ /*промотекст*/
 	margin-top:40px;
 	font-size:11px;
@@ -123,4 +122,9 @@
 		justify-content: space-around;
 		margin: 3% 1% 5% 1%;	
 }
-
+footer{
+	font-size: 4vw;
+	font-weight: bold;
+	font-family: Snell Roundhand, cursive;
+	margin-top: 3%;
+}
