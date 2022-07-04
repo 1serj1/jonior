@@ -135,7 +135,50 @@ function setClock(selector, endtime) {
 
 setClock (`.timer`, chekData );
 
+// РАЗОБРАТСЯ!!!
+const  modalTrigger = document.querySelectorAll(`[data-modal]`), // [data-modal] = все элементы с этим атрибутом
+        modal = document.querySelector(`.modal`),
+        modalCloseBtn  = document.querySelector(`[data-close]`);
 
+        modalTrigger.forEach(btn => {
+              // цикл переборав кнопок
+              btn.addEventListener(`click`, () => {
+                     //        // по клику добавляем или удаляем элементы
+                     modal.classList.toggle(`show`);
+                     // если есть - добавляем, если нет - удаляем
+                     document.body.style.overflow = `hidden`;  
+              });
+          
+       });
+
+//        // ВАЖНО!!! Что бы не плодить одинаковый код, повторяющую часть делаем функцией
+       
+       function closeModal () {
+              modal.classList.toggle(`show`);
+              document.body.style.overflow = ``;  
+       }
+
+       modalCloseBtn.addEventListener(`click`, closeModal);
+       // используем closeModal  после клика
+       
+        // если юзер просто кликнул на странице
+        modal.addEventListener(`click`, (e) => {
+              // если е событие произошло на modal элементе
+              //  е событие ОБЯЗАТЕЛЬНО задавать (e), если нет - это фуууу, но может работать, но не везде
+              if (e.target ===  modal)
+              closeModal ();
+               // вызываем closeModal  после клика И УСЛОВИЯ
+        });
+   
+
+        //ВАЖНО!!!  если нажать Escape - отключение модалок, список названий клавиш - в поисковике
+        document.addEventListener(`keydown`, (e) => { 
+              if (e.code ===  "Escape" &&  modal.classList.contains(`show`)){
+              // &&  - и!  modal.classList.contains(`show`) - окно открыто
+              closeModal ();
+               // вызываем closeModal  после клика И УСЛОВИЯ
+              }
+        });
 
 
 
